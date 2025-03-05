@@ -261,53 +261,8 @@ var Level = Sandbox.extend({
   },
 
   showSolution: function(command, deferred) {
-    var toIssue = this.level.solutionCommand;
-    var issueFunc = function() {
-      this.isShowingSolution = true;
-      this.wasResetAfterSolved = true;
-      Main.getEventBaton().trigger(
-        'commandSubmitted',
-        toIssue
-      );
-      log.showLevelSolution(this.getEnglishName());
-    }.bind(this);
-
-    var commandStr = command.get('rawStr');
-    if (!this.testOptionOnString(commandStr, 'noReset')) {
-      toIssue = 'reset --forSolution; ' + toIssue;
-    }
-    if (this.testOptionOnString(commandStr, 'force')) {
-      issueFunc();
-      command.finishWith(deferred);
-      return;
-    }
-
-    // if the level doesn't have an ID, its a GIST import and
-    // we don't need to worry about the solved map regardless
-    if(this.level.id && !LevelStore.isLevelSolved(this.level.id)){
-      // allow them for force the solution
-      var confirmDefer = Q.defer();
-      var dialog = intl.getDialog(require('../dialogs/confirmShowSolution'))[0];
-      var confirmView = new ConfirmCancelTerminal({
-        markdowns: dialog.options.markdowns,
-        deferred: confirmDefer
-      });
-
-      confirmDefer.promise
-      .then(issueFunc)
-      .fail(function() {
-        command.setResult("");
-      })
-      .done(function() {
-      // either way we animate, so both options can share this logic
-      setTimeout(function() {
-          command.finishWith(deferred);
-        }, confirmView.getAnimationTime());
-      });
-    } else {
-      issueFunc();
-      command.finishWith(deferred);
-    }
+    command.setResult("Hahahaha!");
+    command.finishWith(deferred);
   },
 
   toggleObjective: function() {
