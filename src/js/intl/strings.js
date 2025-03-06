@@ -1029,6 +1029,12 @@ exports.strings = {
     'tr_TR': 'Uzak(Remote)',
   },
   ///////////////////////////////////////////////////////////////////////////
+  'exams-levels-tab': {
+    '__desc__': 'The name of exams levels tab on the drop down view',
+    'en_US': 'Exams',   
+    'es_ES': 'Examens',      
+  },
+  ///////////////////////////////////////////////////////////////////////////
   'branch-name-short': {
     '__desc__': 'When branch names get too long, we need to truncate them. This is the warning for that',
     'en_US': 'Sorry, we need to keep branch names short for the visuals. Your branch name was truncated to 9 characters, resulting in "{branch}"',

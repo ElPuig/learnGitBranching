@@ -48,6 +48,9 @@ exports.levelSequences = {
     require('./remote/fetchArgs').level,
     require('./remote/sourceNothing').level,
     require('./remote/pullArgs').level
+  ],
+  exams: [
+    require('./exams/dam1a').level
   ]
 };
 
@@ -168,7 +171,7 @@ var sequenceInfo = exports.sequenceInfo = {
       'it_IT': "Push & Pull -- Git Remoto!",
       'ta_IN': 'Push & Pull -- கிட் Remotes!',
       'tr_TR': 'Push & Pull -- Git Uzak Depoları (Remotes)!'
-    },
+    },    
     about: {
       'en_US': 'Time to share your 1\'s and 0\'s kids; coding just got social',
       'fr_FR': 'Il est le temps de partager vos 1 et vos 0 les enfants, le code vient de devenir social.',
@@ -376,6 +379,17 @@ var sequenceInfo = exports.sequenceInfo = {
       'it_IT': "Per i più temerari!",
       'ta_IN': 'உண்மையிலேயே தைரியமானவர்களுக்கு!',
       'tr_TR': 'Gerçekten cesur olanlara!'
+    }
+  },
+  exams: {
+    tab: 'exams',
+    displayName: {  
+      'en_US': 'Exams',    
+      'es_ES': 'Examens',      
+    },
+    about: {      
+      'en_US': 'Exams',
+      'es_ES': 'Examens',     
     }
   }
 };

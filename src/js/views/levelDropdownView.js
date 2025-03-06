@@ -38,6 +38,9 @@ var LevelDropdownView = ContainedBase.extend({
       }, {
         id: 'remote',
         name: intl.str('remote-levels-tab')
+      }, {
+        id: 'exams',
+        name: intl.str('exams-levels-tab')
       }]
     };
 
@@ -92,7 +95,8 @@ var LevelDropdownView = ContainedBase.extend({
     );
     this.updateTabNames([
       intl.str('main-levels-tab'),
-      intl.str('remote-levels-tab')
+      intl.str('remote-levels-tab'),
+      intl.str('exams-levels-tab')
     ]);
     LevelDropdownView.__super__.render.apply(this, arguments);
     this.buildSequences();
