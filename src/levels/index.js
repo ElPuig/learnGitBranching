@@ -49,8 +49,15 @@ exports.levelSequences = {
     require('./remote/sourceNothing').level,
     require('./remote/pullArgs').level
   ],
-  exams: [
-    require('./exams/dam1a').level
+  exams: [    
+    require('./exams/dam1aEx1').level,
+    require('./exams/dam1aEx2').level,
+    // require('./exams/dam1bEx1').level,
+    // require('./exams/dam1bEx2').level,
+    // require('./exams/daw1aEx1').level,
+    // require('./exams/daw1aEx2').level,
+    // require('./exams/daw1bEx1').level,
+    // require('./exams/daw1bEx2').level
   ]
 };
 
